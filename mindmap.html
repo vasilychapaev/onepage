@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Mindmap Example (jsMind)</title>
+  <link type="text/css" rel="stylesheet" href="https://cdn.jsdelivr.net/npm/jsmind@0.4.6/style/jsmind.css" />
+  <style>
+    #jsmind_container {
+      width: 100%;
+      height: 600px;
+      border: solid 1px #ccc;
+      background: #f4f4f4;
+    }
+  </style>
+</head>
+<body>
+
+<h2>My Mindmap</h2>
+<div id="jsmind_container"></div>
+
+<!-- JS Libraries -->
+<script src="https://cdn.jsdelivr.net/npm/jsmind@0.4.6/es6/jsmind.js"></script>
+
+<script>
+  const mind = {
+    "meta": {
+      "name": "example_mind",
+      "author": "you",
+      "version": "1.0"
+    },
+    "format": "node_tree",
+    "data": {
+      "id": "root",
+      "topic": "Mindmap Example",
+      "children": [
+        {
+          "id": "idea1",
+          "topic": "🧠 Idea 1",
+          "children": [
+            { "id": "idea1a", "topic": "Detail A" },
+            { "id": "idea1b", "topic": "Detail B" }
+          ]
+        },
+        {
+          "id": "idea2",
+          "topic": "💡 Idea 2",
+          "children": [
+            { "id": "idea2a", "topic": "Detail A" },
+            { "id": "idea2b", "topic": "Detail B" }
+          ]
+        }
+      ]
+    }
+  };
+
+  const options = {
+    container: 'jsmind_container',
+    editable: true,
+    theme: 'primary'
+  };
+
+  const jm = new jsMind(options);
+  jm.show(mind);
+</script>
+
+</body>
+</html>
