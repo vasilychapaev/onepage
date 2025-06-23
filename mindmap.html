@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <title>Mindmap Example (jsMind)</title>
-  <link type="text/css" rel="stylesheet" href="https://cdn.jsdelivr.net/npm/jsmind@0.4.6/style/jsmind.css" />
+  <link type="text/css" rel="stylesheet" href="https://cdn.jsdelivr.net/npm/jsmind/style/jsmind.css" />
   <style>
     #jsmind_container {
       width: 100%;
@@ -18,8 +18,8 @@
 <h2>My Mindmap</h2>
 <div id="jsmind_container"></div>
 
-<!-- JS Libraries -->
-<script src="https://cdn.jsdelivr.net/npm/jsmind@0.4.6/es6/jsmind.js"></script>
+<!-- ✅ Загрузим старую рабочую версию jsMind -->
+<script src="https://cdn.jsdelivr.net/gh/hizzgdev/jsmind@0.4.6/js/jsmind.js"></script>
 
 <script>
   const mind = {
@@ -59,8 +59,7 @@
     theme: 'primary'
   };
 
-  const jm = new jsMind(options);
-  jm.show(mind);
+  const jm = jsMind.show(options, mind);
 </script>
 
 </body>
